@@ -1,0 +1,62 @@
+Command Line Arguments
+ 
+
+Commandline arguments are arguments that can be provided as strings to our program at the time of executing the program from commandline.
+
+ 
+
+These arguments are passed to our program's main function as a character pointer array. To access these arguments we need to change our main function header as below:
+
+ 
+
+int main(int argc, char * argv[])
+
+{
+
+//here argc represents the number of arguments provided at the commandline. This count includes the execution command.
+
+ 
+
+//argv represents the array of character pointers ,each pointer storing the base address of each of the strings given at the command prompt.
+
+}
+
+ 
+
+eg., if the following command is given
+
+ 
+
+>./a.out  abc 123 hello "kernel masters"
+
+ 
+
+this command is taken as below arguments by the program's main function:
+
+ 
+
+argc will be 5
+
+argv will be array that stores the below strings :
+
+ 
+
+argv[0] ->   "./a.out"
+
+argv[1] ->   "abc"
+
+argv[2] ->   "123"
+
+argv[3] ->   "hello"
+
+argv[4] ->   "kernel masters"
+
+ 
+
+if you want to give a commandline input along with space, then keep the argument in double quotation marks.
+
+ 
+
+command line arguments are useful to give input to a program at the time of execution beginning, so that program doesn't have to wait for the user to give input.This way we can execute our programs as a batch by providing the required input at the command line without any user intervension.
+
+
